@@ -12,4 +12,7 @@ public interface MenuService {
     TAdmin getAdminByLogin(String loginacct,String userpswd);
 
     List<TMenu> listAllMenu();
+
+    //不分子父节点
+    List<TMenu> loadTree();
 }

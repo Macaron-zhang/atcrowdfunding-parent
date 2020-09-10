@@ -71,4 +71,11 @@ public class MenuServiceImpl implements MenuService {
 
         return parentMenu;      // 返回所有父，但是，每一个父都带着自己孩子返回
     }
+
+    @Override
+    public List<TMenu> loadTree() {
+
+        List<TMenu> tMenus = tMenuMapper.selectByExample(null);
+        return tMenus;
+    }
 }
